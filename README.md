@@ -4,7 +4,7 @@
 Um bot de Discord fofo, divertido e incrivelmente brincalhão, totalmente inspirado na personalidade encantadora de uma cachorrinha muito travessa!
 
 Construído com a robustez e a simplicidade do **Python**, utilizando a biblioteca **discord.py**, o LuaBot traz uma experiência canina cativante para o seu servidor.
-
+(Psiu -- Eu sei que este bot pode ser "infantil", mas poxa:( deixa eu colocar a essência da minha cachorrinha no discord<3 )
 Lua não é apenas um bot; é uma companheira virtual que pode **latir** de felicidade, dar **mordidinhas de leve** e, sim, até mostrar a prova do crime: aquele **chinelo destruído** que ela encontrou por aí 🩴.
 
 ---
