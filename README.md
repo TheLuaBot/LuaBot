@@ -21,6 +21,8 @@ O LuaBot responde a comandos de barra intuitivos, tornando a interação simples
 -   **Boas-Vindas Personalizadas** — A Lua adora fazer novos amigos! Ela envia uma mensagem de boas-vindas calorosa por Mensagem Direta (DM) a cada novo membro que se junta ao servidor 🐾.
 
 ---
+# Como Adicionar a Lua Bot
+Para adicionar a **Lua Bot** [Clique Aqui para adicioná-la](https://discord.com/oauth2/authorize?client_id=1417634196477972533) ou pesquise por: `https://discord.com/oauth2/authorize?client_id=1417634196477972533`
 
 ## 💻 Tecnologia
 
