@@ -1,10 +1,6 @@
-# Ajude Lua Bot a ficar viva!
-Para ficar online, preciso de dinheiro, com você me ajudando, será ótimo! 
+<h1 align="center">Lua Bot for Developers</h1>
+O Programa "Lua Bot for Developers" é um programa para desenvolvedores poderem ajudar a Lua Bot, por isso irei falar um pouco mais sobre seus recursos.
+<h1 align="center">Regras</h1>
+Você não pode alterar nada do repositório principal, iremos ter um repositório apenas para este programa!!
 
-# Como ajudar a LuaBot
-Pera, você quer me ajudar a ficar online? Então veja estes passos para doar para mim:
-
-- Acesse: `https://livepix.gg/astroficial`
-- Depois, doe pelo menos R$1,00( é o mínimo)
-
-Obrigado se você leu isso!
+O Programa da Lua Bot for Developers faz parte e é patrocinado pela Empresa PerfectTea(https://perfecttea.squareweb.app/)
