@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://top.gg/api/og/entity?id=786203461618487296" alt="Top.gg">
+</p>
 
 # 🐶 LuaBot
 [![](https://jitpack.io/v/TheLuaBot/LuaBot.svg)](https://jitpack.io/#TheLuaBot/LuaBot)
