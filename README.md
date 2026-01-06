@@ -5,7 +5,7 @@
 </p>
 
 # 🐶 LuaBot
-[![](https://jitpack.io/v/TheLuaBot/LuaBot.svg)](https://jitpack.io/#TheLuaBot/LuaBot)
+
 Um bot de Discord fofo, divertido e incrivelmente brincalhão, totalmente inspirado na personalidade encantadora de uma cachorrinha muito travessa!
 
 Construído com a robustez e a simplicidade do **Python**, utilizando a biblioteca **discord.py**, o LuaBot traz uma experiência canina cativante para o seu servidor.
