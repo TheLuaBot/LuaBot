@@ -4,7 +4,7 @@
 </a>
 </p>
 
-# 🐶 LuaBot
+<h1 align=center>🐶 LuaBot 🐶</h1>
 
 Um bot de Discord fofo, divertido e incrivelmente brincalhão, totalmente inspirado na personalidade encantadora de uma cachorrinha muito travessa!
 
