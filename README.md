@@ -47,3 +47,10 @@ Você também utilizar a Lua em algum lugar, caso você não queira usar a vers�
 Mas se você quer mesmo hospedar ela, siga esses passos:
  1. Tenha o Python e a lib do discord.py instalada na sua máquina.
  2. Tenha o Python 3(Ou Superior) na sua máquina.
+
+## 📄 Licença
+O Código fonte da Lua está licenciado sob a [GNU Affero General Public License v3](LICENSE)
+
+A Lua é © Aquele Astro Lá & PerfectTea — Todos os direitos reservados.
+
+Ao usar a Lua, você concorda com os [Termos de Uso dela.](https://theluabot.squareweb.app/guidelines).
