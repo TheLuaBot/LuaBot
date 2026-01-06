@@ -13,7 +13,7 @@ intents.members = True
 bot = commands.Bot(command_prefix='+', intents=intents)
 
 textos = (
-    "🌙| Prefixo: / | Website: theluabot.squareweb.app"
+    "🌙| Atualizando!"
 )
 
 @bot.event
