@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://top.gg/api/og/entity?id=786203461618487296" alt="Top.gg">
+  <a href="https://top.gg/bot/1417634196477972533">
+  <img src="https://top.gg/api/widget/1417634196477972533.svg">
+</a>
 </p>
 
 # 🐶 LuaBot
