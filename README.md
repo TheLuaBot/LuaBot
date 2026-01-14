@@ -54,7 +54,7 @@ Mas se você quer mesmo hospedar ela, siga esses passos:
 
 A Square Cloud tem todos os direitos reservados sobre a logo da marca.
 
-A [https://squarecloud.app](Square Cloud) é a hospedagem que mantém a LuaBot online, e a square é totalmente segura! Eu recomendo!
+A [Square Cloud](https://squarecloud.app) é a hospedagem que mantém a LuaBot online, e a square é totalmente segura! Eu recomendo!
 
 ## 📄 Licença
 O Código fonte da Lua está licenciado sob a [GNU Affero General Public License v3](LICENSE)
