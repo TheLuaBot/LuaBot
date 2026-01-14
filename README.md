@@ -48,6 +48,10 @@ Mas se você quer mesmo hospedar ela, siga esses passos:
  1. Tenha o Python e a lib do discord.py instalada na sua máquina.
  2. Tenha o Python 3(Ou Superior) na sua máquina.
 
+## 🌟 Agradecimentos especiais para...
+
+<img src="https://camo.githubusercontent.com/5ad6b30f3229cce5a35f88b5f2c551e05702299ad4f574e6498f4b2600cab529/68747470733a2f2f63646e2e737175617265636c6f75642e6170702f706e672f6769746875622d726561646d652e706e67" alt="square cloud" align=center>
+
 ## 📄 Licença
 O Código fonte da Lua está licenciado sob a [GNU Affero General Public License v3](LICENSE)
 
