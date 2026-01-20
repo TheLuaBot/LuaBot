@@ -1,3 +1,4 @@
+
 <div align="center">
 
 <h1 align=center>🐶 LuaBot 🐶</h1>
@@ -55,6 +56,15 @@ Mas se você quer mesmo hospedar ela, siga esses passos:
 A Square Cloud tem todos os direitos reservados sobre a logo da marca.
 
 A [Square Cloud](https://squarecloud.app) é a hospedagem que mantém a LuaBot online, e a square é totalmente segura! Eu recomendo!
+
+***
+### 🌟 PerfectTea
+
+<img src="prrfecttea_banner_20260118_131353_0000.png" wdith="600">
+
+**A PerfectTea tem todos os direitos reservados sobre a logo da marca.**
+
+**PerfectTea, empresa mantedora da LuaBot, no qual o objetivo é "Construir Sonhos"!**
 
 ## 📄 Licença
 O Código fonte da Lua está licenciado sob a [GNU Affero General Public License v3](LICENSE)
