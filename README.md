@@ -48,6 +48,7 @@ Você também utilizar a Lua em algum lugar, caso você não queira usar a vers�
 Mas se você quer mesmo hospedar ela, siga esses passos:
  1. Tenha o Python e a lib do discord.py instalada na sua máquina.
  2. Tenha o Python 3(Ou Superior) na sua máquina.
+ 3. Tenha o MongoDB Instalado na sua Máquina(instale a lib pymongo)
 
 ## 🌟 Agradecimentos especiais para...
 
