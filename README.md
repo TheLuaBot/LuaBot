@@ -28,6 +28,7 @@ Existem vários repositórios em nosso Github, e eles são de várias partes da 
 
   - [Lua](https://github.com/TheLuaBot/LuaBot): Código fonte da Lua( o "backend"), que inclui todas as funcionalidades do bot em si(como comandos e tasks).
   - [LuaLocales](https://github.com/TheLuaBot/LuaLocales): Arquivos de tradução da Lua.
+  - [LuaVanGogh](https://github.com/LuaVanGogh): Sistema de Manipulação de imagens da Lua.
 
 ### 💵 Como doar?
 Você pode até não saber programar, mas você pode ajudar a Lua doando! https://livepix.gg/astrooficial (é um livepix pois não tenho um sistema de pagamentos em si da Lua. :C)
@@ -49,6 +50,16 @@ Mas se você quer mesmo hospedar ela, siga esses passos:
  1. Tenha o Python e a lib do discord.py instalada na sua máquina.
  2. Tenha o Python 3(Ou Superior) na sua máquina.
  3. Tenha o MongoDB Instalado na sua Máquina(instale a lib pymongo)
+
+## 🌐 Features
+### 🎨 Sistema de Manipulação de imagens - Lua Van Gogh | Como rodar
+1. Acesse o repositório
+2. Clone o repositório usando git clone
+3. Rode a aplicação:
+```bash
+py -3 main.py
+```
+
 
 ## 🌟 Agradecimentos especiais para...
 
