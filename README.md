@@ -31,7 +31,7 @@ Existem vários repositórios em nosso Github, e eles são de várias partes da 
   - [LuaVanGogh](https://github.com/LuaVanGogh): Sistema de Manipulação de imagens da Lua.
 
 ### 💵 Como doar?
-Você pode até não saber programar, mas você pode ajudar a Lua doando! https://livepix.gg/astrooficial (é um livepix pois não tenho um sistema de pagamentos em si da Lua. :C)
+Você pode até não saber programar, mas você pode ajudar a Lua doando! https://theluabot.squareweb.app/donate
 
 ## 🙌 Como Usar?
 
