@@ -28,7 +28,8 @@ Existem vários repositórios em nosso Github, e eles são de várias partes da 
 
   - [Lua](https://github.com/TheLuaBot/LuaBot): Código fonte da Lua( o "backend"), que inclui todas as funcionalidades do bot em si(como comandos e tasks).
   - [LuaLocales](https://github.com/TheLuaBot/LuaLocales): Arquivos de tradução da Lua.
-  - [LuaVanGogh](https://github.com/LuaVanGogh): Sistema de Manipulação de imagens da Lua.
+  - [LuaVanGogh](https://github.com/TheLuaBot/LuaVanGogh): Sistema de Manipulação de imagens da Lua.
+  - [Lunatic](https://github.com/TheLuaBot/Lunatic)
 
 ### 💵 Como doar?
 Você pode até não saber programar, mas você pode ajudar a Lua doando! https://theluabot.squareweb.app/donate
