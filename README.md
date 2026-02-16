@@ -8,7 +8,7 @@
   <img src="https://top.gg/api/widget/1417634196477972533.svg">
 </a>
   
-  <a href="https://github.com/LorittaBot/Loritta/watchers"><img src="https://img.shields.io/github/watchers/TheLuaBot/LuaBot.svg?style=social&label=Watch"></a>
+  <a href="https://github.com/TheLuaBot/LuaBot/watchers"><img src="https://img.shields.io/github/watchers/TheLuaBot/LuaBot.svg?style=social&label=Watch"></a>
 <a href="https://github.com/LorittaBot/Loritta/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-AGPL%20v3-lightgray.svg"></a>
 
 <a href="https://github.com/TheLuaBot/LuaBot/stargazers"><img src="https://img.shields.io/github/stars/TheLuaBot/LuaBot.svg?style=social&label=Stars"></a>
