@@ -18,7 +18,7 @@ intents.members = True
 bot = commands.Bot(command_prefix='+', intents=intents)
 
 textos = (
-    "🌙| Use meus novos comandos! /saldo e /daily!"
+    "🌙| Use meus novos comandos! /minerar!"
 )
 
 @bot.event
@@ -107,6 +107,22 @@ async def daily_error(interaction: discord.Interaction, error: app_commands.AppC
     else:
         raise(error)     
 
+# Tive a Ideia quando tava vendo o Koxik Bot
+@bot.tree.command(name="minerar", description="[Minecraft] Minere Minérios no Discord!")
+async def minerar(interaction: discord.Interaction):
+    minerios = ["Pedra", "Carvão", "Cobre", "Ferro", "Ouro", "Diamante"]
 
+    resultado = random.choices(minerios)
+
+
+    embed = discord.Embed(
+        title="⛏️ Mineração",
+        description=f"{interaction.user.mention} foi pras profundezas e encontrou:",
+        color=discord.Color.blue()
+    )
+
+    embed.add_field(name="Minério Coletado", value=f"Minério: ⛏️ {resultado}")
+
+    await interaction.response.send_message(embed=embed)
 
 bot.run(TOKEN)  
