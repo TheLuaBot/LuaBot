@@ -125,4 +125,28 @@ async def minerar(interaction: discord.Interaction):
 
     await interaction.response.send_message(embed=embed)
 
+@bot.tree.command(name="coinflip", description="Faça um Cara ou Coroa no Discord!")
+async def coinflip(interaction: discord.Interaction):
+    caraoucoroa = ["Cara", "Coroa"]
+
+    resultado = random.choices(caraoucoroa)
+
+    await interaction.response.send_message(f"🪙 {resultado}!")
+
+bot.tree.command(name="minecraft_skin", description="Veja a skin de um jogador de Minecraft")
+@app_commands.describe(player="O nome (nickname) do jogador")
+async def skin(interaction: discord.Interaction, player: str):
+    # Render "body" mostra o corpo inteiro do personagem
+    skin_url = f"https://crafatar.com/renders/body/{player}?overlay"
+    
+    
+    embed = discord.Embed(
+        title=f"Skin de {player}",
+        color=discord.Color.blue()
+    )
+    embed.set_image(url=skin_url)
+    embed.set_footer(text="API fornecida por Crafatar")
+
+    await interaction.response.send_message(embed=embed)
+
 bot.run(TOKEN)  
