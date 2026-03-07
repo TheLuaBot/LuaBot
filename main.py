@@ -1,16 +1,19 @@
 import discord
 from discord import app_commands
+from discord import ui
 from discord.ext import commands
 from dotenv import load_dotenv
 import random
+import asyncio
 import os
 
 from database import *
 
+TOSCO_MODE = False
+
 load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
-
 
 intents = discord.Intents.default()
 intents.members = True
@@ -18,7 +21,7 @@ intents.members = True
 bot = commands.Bot(command_prefix='+', intents=intents)
 
 textos = (
-    "🌙| Use meus novos comandos! /minerar!"
+    "🌙| Olá Eu sou a Lua Bot!"
 )
 
 @bot.event
@@ -107,7 +110,7 @@ async def daily_error(interaction: discord.Interaction, error: app_commands.AppC
     else:
         raise(error)     
 
-# Tive a Ideia quando tava vendo o Koxik Bot
+
 @bot.tree.command(name="minerar", description="[Minecraft] Minere Minérios no Discord!")
 async def minerar(interaction: discord.Interaction):
     minerios = ["Pedra", "Carvão", "Cobre", "Ferro", "Ouro", "Diamante"]
@@ -133,7 +136,7 @@ async def coinflip(interaction: discord.Interaction):
 
     await interaction.response.send_message(f"🪙 {resultado}!")
 
-bot.tree.command(name="minecraft_skin", description="Veja a skin de um jogador de Minecraft")
+@bot.tree.command(name="minecraft_skin", description="Veja a skin de um jogador de Minecraft")
 @app_commands.describe(player="O nome (nickname) do jogador")
 async def skin(interaction: discord.Interaction, player: str):
     # Render "body" mostra o corpo inteiro do personagem
@@ -149,4 +152,43 @@ async def skin(interaction: discord.Interaction, player: str):
 
     await interaction.response.send_message(embed=embed)
 
-bot.run(TOKEN)  
+@bot.tree.command(name="modo_tosco", description="Veja para que serve o Modo Tosco da LuaBot!")
+async def modo_tosco(interaction: discord.Interaction):
+    embed = discord.Embed(
+        title="💩 Modo Tosco",
+        color=discord.Color.blue(),
+        description="O Modo Tosco serve para deixar seu servidor muito divertido, por exemplo, eu vou reagir a mensagens aleatórias do seu servidor!"
+    )
+
+    await interaction.response.send_message(embed=embed)
+
+@bot.tree.command(name="ativar_modo_tosco", description="Ativa o Modo Tosco da LuaBot!")
+async def ativar_tosco_mode(interaction: discord.Interaction):
+    global TOSCO_MODE
+    TOSCO_MODE = True
+    await interaction.response.send_message("**Modo Tosco Ativado!**")
+
+@bot.tree.command(name="desativar_modo_tosco", description="Desativa o Modo Tosco!")
+async def desativar_tosco_mode(interaction: discord.Interaction):
+    TOSCO_MODE = False
+    await interaction.response.send_message(f"**Modo Tosco Desativado!**")
+
+@bot.event
+async def on_message(message):
+    if message.author == bot.user:
+        return
+
+    
+    if TOSCO_MODE == True:
+        
+        
+        
+        if random.randint(1, 100) <= 50:
+            emoji_tosco = "<:PhoenixUe:1032040147706990644>"
+            
+            
+            await message.add_reaction(emoji_tosco)
+
+    await bot.process_commands(message)
+
+bot.run(TOKEN)
