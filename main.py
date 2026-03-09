@@ -8,6 +8,8 @@ import asyncio
 import os
 
 from database import *
+from utils.isGestor import verificar_gestor
+from command.dev import shutdown
 
 TOSCO_MODE = False
 
@@ -35,6 +37,8 @@ async def on_ready():
             textos
         )
     )
+
+    bot.tree.add_command(shutdown.shutdown)
 
     try:
         synced = await bot.tree.sync()
