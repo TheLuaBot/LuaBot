@@ -9,7 +9,8 @@ import os
 
 from database import *
 from utils.isGestor import verificar_gestor
-from command.dev import shutdown
+from command.dev import shutdown, restart
+from command.roleplay import abraco
 
 TOSCO_MODE = False
 
@@ -38,8 +39,13 @@ async def on_ready():
         )
     )
 
+    # Comandos de Dev
     bot.tree.add_command(shutdown.shutdown)
+    bot.tree.add_command(restart.restart)
 
+    # Comandos de Roleplay(esqueci de colocar o comando /abracar)
+    bot.tree.add_command(abraco.abracar)
+    
     try:
         synced = await bot.tree.sync()
         print(f"Sincronizados {len(synced)} comandos..")
