@@ -1,33 +1,26 @@
 
-# 🐶 LuaBot
+<a href="https://top.gg/bot/1417634196477972533">
+<img src="https://top.gg/api/widget/1417634196477972533.svg">
+</a>
 
-Um bot de Discord fofo, divertido e incrivelmente brincalhão, totalmente inspirado na personalidade encantadora de uma cachorrinha muito travessa!
 
-Construído com a robustez e a simplicidade do **Python**, utilizando a biblioteca **discord.py**, o LuaBot traz uma experiência canina cativante para o seu servidor.
+# 🐶 LuaBot v1
 
-Lua não é apenas um bot; é uma companheira virtual que pode **latir** de felicidade, dar **mordidinhas de leve** e, sim, até mostrar a prova do crime: aquele **chinelo destruído** que ela encontrou por aí 🩴.
+**Status: ⚠️ Obsoleto**
 
----
+Esta é a primeira versão da **LuaBot**. Essa versão não está sendo mais mantida pela [PerfectTea](https://perfecttea.squareweb.app/)
 
-## 🚀 Funcionalidades Principais (Os Truques da Lua)
+A Primeira versão não havia sistema de economia, comandos de Minecraft e entre outros, por que eu tive bastante ideias de comandos e atualizações e agora ela usa duas APIs, a API da **SquareCloud** e a API do **MongoDB🍃**.
 
-O LuaBot responde a comandos de barra intuitivos, tornando a interação simples e agradável para todos os membros do servidor:
+## Tecnologias usadas
 
--   `/ping` — Um comando essencial que exibe a latência (o tempo de resposta) do bot, garantindo que ela está sempre ligada e alerta.
--   `/morder <usuário>` — Não se preocupe, é apenas uma mordidinha carinhosa! Use este comando para interagir de forma divertida com outro membro.
--   `/chinelos` — Prepare-se para a confissão. Este comando exibe a imagem de um chinelo que não resistiu aos dentes da Lua.
--   `/carinho` — Um pedido irrecusável. A Lua sempre aceita um bom carinho, e este comando demonstra a afeição dela por você.
--   `/latir` — A cachorrinha está animada! Lua solta uma sequência de latidos empolgados para saudar a todos ou comemorar algo.
--   **Boas-Vindas Personalizadas** — A Lua adora fazer novos amigos! Ela envia uma mensagem de boas-vindas calorosa por Mensagem Direta (DM) a cada novo membro que se junta ao servidor 🐾.
+- [Python](https://python.org/)
+- [Discord.py](https://discordpy.readthedocs.io/en/latest/)
+- [Vs Code](https://code.visualstudio.com/)
 
----
+## 📄 Licença
+A LuaBot está licenciada sob a GNU Affero General Public License 3.0(AGPL 3.0)
 
-## 💻 Tecnologia
+**PerfectTea(c) - Todos os Direitos Reservados.**
 
-O LuaBot foi desenvolvido em:
--   **Linguagem de Programação:** Python
--   **Biblioteca Principal:** `discord.py` para a interação fluida com a API do Discord.
-
----
-# 📌Licença
-Este Projeto Está licenciado sobre **AGPL 3.0 License**. Veja o Arquivo [LICENSE](LICENSE) para mais informações.
+**Astro(c) - Todos os Direitos Reservados.**
