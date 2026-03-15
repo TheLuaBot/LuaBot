@@ -10,7 +10,7 @@ import os
 from database import *
 from utils.isGestor import verificar_gestor
 from command.dev import shutdown, restart
-from command.roleplay import abraco
+from command.roleplay import abraco, invocar
 from command.infos import userinfo
 
 TOSCO_MODE = False
@@ -46,6 +46,7 @@ async def on_ready():
 
     # Comandos de Roleplay(esqueci de colocar o comando /abracar)
     bot.tree.add_command(abraco.abracar)
+    bot.tree.add_command(invocar.invocar)
 
     # Comandos de Infos
     bot.tree.add_command(userinfo.userinfo)
