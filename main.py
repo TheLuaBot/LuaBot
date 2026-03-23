@@ -12,6 +12,7 @@ from utils.isGestor import verificar_gestor
 from command.dev import shutdown, restart
 from command.roleplay import abraco, invocar, beijar
 from command.infos import userinfo
+from caramelo.caramelo import lock
 
 TOSCO_MODE = False
 
@@ -51,6 +52,9 @@ async def on_ready():
 
     # Comandos de Infos
     bot.tree.add_command(userinfo.userinfo)
+    
+    # Comandos do Caramelo Automod/Mod
+    bot.tree.add_command(lock) # Comando de Trancar o Canal
     
     try:
         synced = await bot.tree.sync()
