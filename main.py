@@ -42,6 +42,8 @@ async def on_ready():
         )
     )
 
+     blacklist_cache = save_blacklist()
+
     # Comandos de Dev
     bot.tree.add_command(shutdown.shutdown)
     bot.tree.add_command(restart.restart)
