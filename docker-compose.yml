@@ -1,0 +1,18 @@
+services:
+  luabot:
+    build: .
+    container_name: luabot_container
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    container_name: luabot_db
+    restart: always
+    volumes:
+      - luabot_data:/data/db
+
+volumes: luabot_data
