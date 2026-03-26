@@ -1,0 +1,25 @@
+name: Docker Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v4
+
+      # Aqui entra a action que você enviou, mas de forma simplificada
+      - name: Configurar Docker
+        uses: docker/setup-docker-action@v4
+        with:
+          rootless: true # Mais seguro para workflows de bot
+
+      - name: Build da LuaBot
+        run: |
+          docker build -t luabot:latest .
