@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,12 +18,11 @@ jobs:
       - name: Checkout do Código
         uses: actions/checkout@v4
 
-      # Aqui entra a action que você enviou, mas de forma simplificada
       - name: Configurar Docker
         uses: docker/setup-docker-action@v4
         with:
-          rootless: true # Mais seguro para workflows de bot
+          rootless: true
 
-      - name: Build da LuaBot
+      - name: Build
         run: |
           docker build -t luabot:latest .
