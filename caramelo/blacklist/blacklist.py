@@ -54,7 +54,7 @@ async def blacklist_add(interaction: discord.Interaction, usuario: discord.User)
         else:
             await interaction.response.send_message("Este usuário já está na lista.", ephemeral=True)
     
-    if not owner_id:
+    if owner_id == interaction.user.id:
         await interaction.response.send_message("Você não pode usar esse comando!")
 
 # TODO: /blacklist_remove
