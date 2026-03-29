@@ -38,10 +38,6 @@ async def check_blacklist(interaction: discord.Interaction):
         return False
     return True
         
-    if guild_id in blacklist_data["servidores"]:
-        return False 
-        
-    return True
 
 @bot.tree.command(name="blacklist_add", description="[Caramelo Blacklist] Adiciona um usuário à blacklist")
 async def blacklist_add(interaction: discord.Interaction, usuario: discord.User):
@@ -57,4 +53,18 @@ async def blacklist_add(interaction: discord.Interaction, usuario: discord.User)
     if owner_id == interaction.user.id:
         await interaction.response.send_message("Você não pode usar esse comando!")
 
-# TODO: /blacklist_remove
+@bot.tree.command(name="blacklist_remove", description="[Caramelo Blacklist] Remove um usuário da Blacklist")
+async def blacklist_remove(interaction: discord.Interaction, usuario: discord.User):
+        try:
+            blacklist_data["usuarios"].remove(usuario.id)
+
+            save_blacklist
+
+            await interaction.response.send_message("Usuário removido!")
+        except ValueError: 
+    
+            await interaction.response.send_message("Erro: O usuário não estava na lista.")
+        
+        if usuario.id not in blacklist_data["usuarios"]:
+            await interaction.response.send_message(f"💥 O Usuário {usuario} não está na lista! Por isso não tem como ele ser removido!")
+            return
