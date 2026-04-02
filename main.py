@@ -7,27 +7,32 @@ import random
 import asyncio
 import os
 
-from database import *
+from database import checar_saldo, alterar_saldo
+
 from utils.isGestor import verificar_gestor
 from command.dev import shutdown, restart
 from command.roleplay import abraco, invocar, beijar
-from command.infos import userinfo
-from caramelo.blacklist.blacklist import blacklist_add, save_blacklist, blacklist_remove
+from command.infos import userinfo, botinfo
+from caramelo.blacklist.blacklist import blacklist_add, save_blacklist, blacklist_data, blacklist_remove
 from caramelo.caramelo import lock
 
+
 TOSCO_MODE = False
+
 
 load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
+CARGO_GESTOR = os.getenv("CARGO_GESTOR") 
 
 intents = discord.Intents.default()
 intents.members = True
 
+
 bot = commands.Bot(command_prefix='+', intents=intents)
 
 textos = (
-    "🌙| Olá Eu sou a Lua Bot!"
+    "🌙| Olá Eu Sou a LuaBot!"
 )
 
 @bot.event
@@ -42,31 +47,38 @@ async def on_ready():
         )
     )
 
-     blacklist_cache = save_blacklist()
+    
+    blacklist_cache = save_blacklist()
 
-    # Comandos de Dev
+    # Registra o comando manualmente na árvore
+
+    # Comandos de Development :D
     bot.tree.add_command(shutdown.shutdown)
     bot.tree.add_command(restart.restart)
 
-    # Comandos de Roleplay(esqueci de colocar o comando /abracar)
+    # Comandos de Roleplay
     bot.tree.add_command(abraco.abracar)
     bot.tree.add_command(invocar.invocar)
     bot.tree.add_command(beijar.beijar)
 
     # Comandos de Infos
     bot.tree.add_command(userinfo.userinfo)
-    
+    bot.tree.add_command(botinfo.botinfo)
+
     # Comandos do Caramelo Automod/Mod
     bot.tree.add_command(lock) # Comando de Trancar o Canal
-    bot.tree.add_command(blacklist_add)
-    bot.tree.add_command(blacklist_remove)
-    
+    bot.tree.add_command(blacklist_add) # comando de adicionar um usuário na blacklist
+    bot.tree.add_command(blacklist_remove) # Comando de Remover um usuário da blacklist!
+
+
     try:
         synced = await bot.tree.sync()
         print(f"Sincronizados {len(synced)} comandos..")
     except Exception as e:
         print(f"Erro ao sincronizar comandos: {e}")
     print(f'Bot conectado como {bot.user}')
+
+
 
 @bot.tree.command(name="ping", description="Veja o ping do bot")
 async def ping(interaction: discord.Interaction):
@@ -209,12 +221,20 @@ async def on_message(message):
         
         
         if random.randint(1, 100) <= 50:
-            emoji_tosco = "<:PhoenixUe:1032040147706990644>"
+            emoji_tosco = "🙌"
             
             
             await message.add_reaction(emoji_tosco)
 
     await bot.process_commands(message)
+
+@bot.tree.command(name="gerenciar_produtos", description="[Administração] Gerencie os Produtos da Lojinha da LuaBot!")
+async def gerenciar(interaction: discord.Interaction):
+
+    if not verificar_gestor(interaction.user):
+        return await interaction.response.send_message("💻 Você não tem permissão pra gerenciar minha loja!", ephemeral=True)
+    await interaction.response.send_message("Funcionando!")
+
 
 @bot.tree.command(name="ban", description="Joga o martelo em alguém que quebrou as regras :D")
 async def ban(interaction: discord.Interaction, user: discord.Member, reason: str = "Sem motivo especificado"):
