@@ -281,5 +281,10 @@ async def unban(interaction: discord.Interaction, user_id: str, reason: str = "S
     except Exception as e:
         await interaction.response.send_message(f"❌ Erro ao desbanir: `{e}`", ephemeral=True)
 
+@bot.tree.command(name="monica_coringa_ata", description="Veja um coringa no pc kkk")
+async def coringa_ata(interaction: discord.Interaction):
+    with open('commands_assets/monica_ata.png', 'rb') as coringa:
+        image = discord.File(coringa)
+        await interaction.response.send_message(file=image)
 
 bot.run(TOKEN)
