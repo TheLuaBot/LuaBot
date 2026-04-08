@@ -10,7 +10,7 @@ import os
 from database import checar_saldo, alterar_saldo
 
 from utils.isGestor import verificar_gestor
-from command.dev import shutdown, restart
+from command.dev import shutdown, restart, performance
 from command.roleplay import abraco, invocar, beijar
 from command.infos import userinfo, botinfo
 from caramelo.blacklist.blacklist import blacklist_add, save_blacklist, blacklist_data, blacklist_remove
@@ -55,6 +55,7 @@ async def on_ready():
     # Comandos de Development :D
     bot.tree.add_command(shutdown.shutdown)
     bot.tree.add_command(restart.restart)
+    bot.tree.add_command(performance.performance)
 
     # Comandos de Roleplay
     bot.tree.add_command(abraco.abracar)
