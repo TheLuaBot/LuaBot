@@ -14,7 +14,7 @@ from command.dev import shutdown, restart, performance
 from command.roleplay import abraco, invocar, beijar
 from command.infos import userinfo, botinfo
 from caramelo.blacklist.blacklist import blacklist_add, save_blacklist, blacklist_data, blacklist_remove
-from caramelo.caramelo import lock
+from caramelo.caramelo import lock, unlock
 
 
 TOSCO_MODE = False
@@ -68,6 +68,7 @@ async def on_ready():
 
     # Comandos do Caramelo Automod/Mod
     bot.tree.add_command(lock) # Comando de Trancar o Canal
+    bot.tree.add_command(unlock)
     bot.tree.add_command(blacklist_add) # comando de adicionar um usuário na blacklist
     bot.tree.add_command(blacklist_remove) # Comando de Remover um usuário da blacklist!
 
