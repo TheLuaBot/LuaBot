@@ -28,4 +28,18 @@ async def lock(interaction: discord.Interaction):
         
         await interaction.response.send_message(f"🔒 Este canal foi trancado por {interaction.user.mention}!")
 
-# TODO: Fazer o Comando de /unlock
+@bot.tree.command(name="unlock", description="[Caramelo Mod] Desbloqueie um canal do servidor!")
+async def unlock(interaction: discord.Interaction):
+
+    if not interaction.user.guild.manage_channels:
+        await interaction.response.send_message("Você não tem permissão de gerenciar canais!", ephemeral=True)
+
+    if interaction.user.guild.manage_channels:
+        everyone = interaction.guild.default_role
+        channel = interaction.channel
+
+        overwrite = channel.overwrites_for(everyone)
+        overwrite.send_messages = True
+
+        await channel.set_permissions(everyone, overwrite=overwrite)
+        await interaction.response.send_message(f"🔓 Este canal foi desbloqueado por {interaction.user.mention}!")
