@@ -12,7 +12,7 @@ from database import checar_saldo, alterar_saldo
 from utils.isGestor import verificar_gestor
 from command.dev import shutdown, restart, performance
 from command.roleplay import abraco, invocar, beijar
-from command.infos import userinfo, botinfo
+from command.infos import userinfo, botinfo, perfil
 from caramelo.blacklist.blacklist import blacklist_add, save_blacklist, blacklist_data, blacklist_remove
 from caramelo.caramelo import lock, unlock
 
@@ -65,6 +65,7 @@ async def on_ready():
     # Comandos de Infos
     bot.tree.add_command(userinfo.userinfo)
     bot.tree.add_command(botinfo.botinfo)
+    bot.tree.add_command(perfil.perfil)
 
     # Comandos do Caramelo Automod/Mod
     bot.tree.add_command(lock) # Comando de Trancar o Canal
