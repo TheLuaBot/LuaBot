@@ -13,12 +13,15 @@ from utils.isGestor import verificar_gestor
 from command.dev import shutdown, restart, performance
 from command.roleplay import abraco, invocar, beijar
 from command.infos import userinfo, botinfo, perfil
+from shih.shih_manager import DiscordTokenManager, MongoDBTokenManager
 from caramelo.blacklist.blacklist import blacklist_add, save_blacklist, blacklist_data, blacklist_remove
 from caramelo.caramelo import lock, unlock
 
 
 TOSCO_MODE = False
 
+dtm = DiscordTokenManager()
+mdbtm = MongoDBTokenManager()
 
 load_dotenv()
 
@@ -289,5 +292,11 @@ async def coringa_ata(interaction: discord.Interaction):
     with open('commands_assets/monica_ata.png', 'rb') as coringa:
         image = discord.File(coringa)
         await interaction.response.send_message(file=image)
+
+@bot.tree.command(name="eventos", description="Veja se tem algum evento disponível na LuaBot!")
+async def eventos(interaction: discord.Interaction):
+    avaible_events = "Aniversário da Lua - Feliz 1 Ano Luinha!"
+
+    await interaction.response.send_message(f"O Evento disponível é o(a) **{avaible_events}**!")
 
 bot.run(TOKEN)
