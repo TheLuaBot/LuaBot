@@ -299,4 +299,10 @@ async def eventos(interaction: discord.Interaction):
 
     await interaction.response.send_message(f"O Evento disponível é o(a) **{avaible_events}**!")
 
+@bot.tree.command(name="monica_ralsei_ata", description="Veja a Mônica reagindo ao ralsei da melhor maneira possível")
+async def ralsei_ata(interaction: discord.Interaction):
+    with open('commands_assets/monica_ata_ralsei.png', 'rb') as ralsei:
+        image = discord.File(ralsei)
+        await interaction.response.send_message(file=image)
+
 bot.run(TOKEN)
