@@ -12,13 +12,12 @@ from database import checar_saldo, alterar_saldo
 from utils.isGestor import verificar_gestor
 from command.dev import shutdown, restart, performance
 from command.roleplay import abraco, invocar, beijar
-from command.infos import userinfo, botinfo, perfil
+from command.infos import userinfo, botinfo, perfil, galleryofmoon
 from shih.shih_manager import DiscordTokenManager, MongoDBTokenManager
 from caramelo.blacklist.blacklist import blacklist_add, save_blacklist, blacklist_data, blacklist_remove
 from caramelo.caramelo import lock, unlock
 
 
-TOSCO_MODE = False
 
 dtm = DiscordTokenManager()
 mdbtm = MongoDBTokenManager()
@@ -69,6 +68,7 @@ async def on_ready():
     bot.tree.add_command(userinfo.userinfo)
     bot.tree.add_command(botinfo.botinfo)
     bot.tree.add_command(perfil.perfil)
+    bot.tree.add_command(galleryofmoon.gofmoon)
 
     # Comandos do Caramelo Automod/Mod
     bot.tree.add_command(lock) # Comando de Trancar o Canal
@@ -195,44 +195,6 @@ async def skin(interaction: discord.Interaction, player: str):
 
     await interaction.response.send_message(embed=embed)
 
-@bot.tree.command(name="modo_tosco", description="Veja para que serve o Modo Tosco da LuaBot!")
-async def modo_tosco(interaction: discord.Interaction):
-    embed = discord.Embed(
-        title="💩 Modo Tosco",
-        color=discord.Color.blue(),
-        description="O Modo Tosco serve para deixar seu servidor muito divertido, por exemplo, eu vou reagir a mensagens aleatórias do seu servidor!"
-    )
-
-    await interaction.response.send_message(embed=embed)
-
-@bot.tree.command(name="ativar_modo_tosco", description="Ativa o Modo Tosco da LuaBot!")
-async def ativar_tosco_mode(interaction: discord.Interaction):
-    global TOSCO_MODE
-    TOSCO_MODE = True
-    await interaction.response.send_message("**Modo Tosco Ativado!**")
-
-@bot.tree.command(name="desativar_modo_tosco", description="Desativa o Modo Tosco!")
-async def desativar_tosco_mode(interaction: discord.Interaction):
-    TOSCO_MODE = False
-    await interaction.response.send_message(f"**Modo Tosco Desativado!**")
-
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return
-
-    
-    if TOSCO_MODE == True:
-        
-        
-        
-        if random.randint(1, 100) <= 50:
-            emoji_tosco = "🙌"
-            
-            
-            await message.add_reaction(emoji_tosco)
-
-    await bot.process_commands(message)
 
 @bot.tree.command(name="gerenciar_produtos", description="[Administração] Gerencie os Produtos da Lojinha da LuaBot!")
 async def gerenciar(interaction: discord.Interaction):
