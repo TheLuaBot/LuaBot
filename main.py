@@ -267,4 +267,10 @@ async def ralsei_ata(interaction: discord.Interaction):
         image = discord.File(ralsei)
         await interaction.response.send_message(file=image)
 
+@bot.tree.command(name="monica_tobias_ata", description="Tobias??")
+async def tobias_ata(interaction: discord.Interaction):
+    with open('commands_assets/monica_ata_tobias.png', 'rb') as f:
+        image = discord.File(f)
+        await interaction.response.send_message(file=image)
+
 bot.run(TOKEN)
