@@ -21,8 +21,10 @@ client = square.Client(api_key=SQUARE_TOKEN)
 
 @bot.tree.command(name="shutdown", description="[Dev] Para o processo de execução da LuaBot")
 async def shutdown(interaction: discord.Interaction):
-    if not OWNER_ID:
-        await interaction.response.send_message("Tá querendo me desligar é? **Você não tem permissão para me desativar!**")
-    else:
-        await client.stop_app(SQUARE_APP_ID)
-        print("Adeus Mundo Cruel")
+    if str(interaction.user.id) != OWNER_ID:
+      await interaction.response.send_message( "Tá querendo me desligar é? **Você não tem permissão para me desativar!**" )
+
+    if str(interaction.user.id) == OWNER_ID:
+      await interaction.response.send_message("Desligando...")
+      print(f"{interaction.user.id} me desligou!")
+      await client.stop_app(SQUARE_APP_ID)
