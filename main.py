@@ -273,4 +273,21 @@ async def tobias_ata(interaction: discord.Interaction):
         image = discord.File(f)
         await interaction.response.send_message(file=image)
 
+@bot.tree.command(name="escolher", description="Está com dificuldade em escolher coisas? Deixe que eu escolho pra você!")
+@app_commands.describe(opcoes="As suas escolhas")
+async def escolher(interaction: discord.Interaction, opcoes: str):
+    
+    opcoes_list = [opcao.strip() for opcao in opcoes.split(',')]
+
+    if len(opcoes_list) < 2 or opcoes_list[0] == "":
+        await interaction.response.send_message(
+            "❌ Você precisa me dar pelo menos **duas** opções separadas por vírgula!", 
+            ephemeral=True 
+        )
+        return
+
+    escolha = random.choice(opcoes_list)
+
+    await interaction.response.send_message(f"😃 Eu escolho `{escolha}`, espero que esteja feliz com o resultado!")
+
 bot.run(TOKEN)
