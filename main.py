@@ -10,7 +10,7 @@ import os
 from database import checar_saldo, alterar_saldo
 
 from utils.isGestor import verificar_gestor
-from command.dev import shutdown, restart, performance
+from command.dev import shutdown, restart, performance, connect
 from command.roleplay import abraco, invocar, beijar
 from command.infos import userinfo, botinfo, perfil, galleryofmoon
 from shih.shih_manager import DiscordTokenManager, MongoDBTokenManager
@@ -58,6 +58,7 @@ async def on_ready():
     bot.tree.add_command(shutdown.shutdown)
     bot.tree.add_command(restart.restart)
     bot.tree.add_command(performance.performance)
+    bot.tree.add_command(connect.conectar_api)
 
     # Comandos de Roleplay
     bot.tree.add_command(abraco.abracar)
