@@ -51,16 +51,6 @@ Mas se você quer mesmo hospedar ela, siga esses passos:
  2. Tenha o Python 3(Ou Superior) na sua máquina.
  3. Tenha o MongoDB Instalado na sua Máquina(instale a lib pymongo)
 
-## 🌐 Features
-### 🎨 Sistema de Manipulação de imagens - Lua Van Gogh | Como rodar
-1. Acesse o repositório
-2. Clone o repositório usando git clone
-3. Rode a aplicação:
-```bash
-py -3 main.py
-```
-
-
 ## 🌟 Agradecimentos especiais para...
 
 <img src="https://camo.githubusercontent.com/5ad6b30f3229cce5a35f88b5f2c551e05702299ad4f574e6498f4b2600cab529/68747470733a2f2f63646e2e737175617265636c6f75642e6170702f706e672f6769746875622d726561646d652e706e67" alt="square cloud" align=center>
