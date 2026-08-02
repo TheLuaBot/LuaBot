@@ -11,7 +11,7 @@ from database import checar_saldo, alterar_saldo
 
 from utils.isGestor import verificar_gestor
 from command.dev import shutdown, restart, performance, connect
-from command.roleplay import abraco, invocar, beijar
+from command.roleplay import abraco, invocar, beijar, avaliar
 from command.infos import userinfo, botinfo, perfil, galleryofmoon
 from shih.shih_manager import DiscordTokenManager, MongoDBTokenManager
 from caramelo.blacklist.blacklist import blacklist_add, save_blacklist, blacklist_data, blacklist_remove
@@ -64,6 +64,7 @@ async def on_ready():
     bot.tree.add_command(abraco.abracar)
     bot.tree.add_command(invocar.invocar)
     bot.tree.add_command(beijar.beijar)
+    bot.tree.add_command(avaliar.avaliar)
 
     # Comandos de Infos
     bot.tree.add_command(userinfo.userinfo)
