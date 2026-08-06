@@ -1,4 +1,4 @@
-from database.database import checar_saldo
+from database import checar_saldo
 import discord
 from discord import app_commands
 from discord.ext import commands
