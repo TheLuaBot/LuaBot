@@ -18,10 +18,11 @@ bot = commands.Bot(command_prefix='+', intents=intents)
 
 client = square.Client(api_key=SQUARE_TOKEN)
 
-@bot.tree.command(name="restart", description="Reinicia a LuaBot em casos de emergência :D")
-async def restart(interaction: discord.Interaction):
-    if not OWNER_ID:
-        await interaction.response.send_message("Você não pode me reiniciar! >:C")
-    else:
-        await client.restart_app(SQUARE_APP_ID)
-        print("Reiniciando...")
+@bot.tree.command(name="performance", description="[Dev] Veja a performance da LuaBot!")
+async def performance(interaction: discord.Interaction):
+    if str(interaction.user.id) != OWNER_ID:
+        await interaction.response.send_message("Tá querendo ver se eu tô funcionando? Pois não pode!")
+    if str(interaction.user.id) == OWNER_ID:
+        status = await client.app_status(SQUARE_APP_ID) # StatusData(...)
+
+        await interaction.response.send_message(f"Performance: **RAM:**{status.ram}, **CPU:** {status.cpu}, **Network:** {status.network}")      
