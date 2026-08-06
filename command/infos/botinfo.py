@@ -42,7 +42,7 @@ async def botinfo(interaction: discord.Interaction):
         inline=False
     )
 
-    embed.set_footer(text="PerfectTea © 2026")
+    embed.set_footer(text="PerfectTea © 2025-present")
 
     
     embed.set_image(url="https://imgur.com/oiTh7tz")

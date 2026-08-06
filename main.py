@@ -15,6 +15,7 @@ from command.roleplay import abraco, invocar, beijar, avaliar
 from command.infos import userinfo, botinfo, perfil, galleryofmoon
 from shih.shih_manager import DiscordTokenManager, MongoDBTokenManager
 from caramelo.blacklist.blacklist import blacklist_add, save_blacklist, blacklist_data, blacklist_remove
+from dreamconta.conta import registrar_conta
 from caramelo.caramelo import lock, unlock
 
 
@@ -77,6 +78,9 @@ async def on_ready():
     bot.tree.add_command(unlock)
     bot.tree.add_command(blacklist_add) # comando de adicionar um usuário na blacklist
     bot.tree.add_command(blacklist_remove) # Comando de Remover um usuário da blacklist!
+
+    # Comandos da DreamConta
+    bot.tree.add_command(registrar_conta)
 
 
     try:
