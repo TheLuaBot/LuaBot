@@ -296,4 +296,12 @@ async def escolher(interaction: discord.Interaction, opcoes: str):
 
     await interaction.response.send_message(f"😃 Eu escolho `{escolha}`, espero que esteja feliz com o resultado!")
 
+@bot.tree.command(name="quem_e_provavel", description="[Social] Quem é mais provável de...")
+async def quem_e_provavel(interaction: discord.Interaction, user: discord.Member):
+    frases = ["se casar!", "criar um negócio!", "virar atendente!"]
+
+    frase_escolhida = random.choice(frases)
+
+    await interaction.response.send_message(f"{user.mention} é mais provável de {frase_escolhida}")
+
 bot.run(TOKEN)
