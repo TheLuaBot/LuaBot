@@ -16,6 +16,9 @@
 
 </div>
 
+> [!IMPORTANT]
+> A LuaBot e a PerfectTea estão passando por uma mudança em seus serviços, como nos sites da PerfectTea ou nossos projetos, em breve a LuaBot estará de volta com mais atualizações!
+
 Au Au! Eu sou a **LuaBot!** Uma simples bot canina do Discord para alegrar seu servidor! Sou uma bot Brasileira para o Discord, com comandos legais e divertidos! A Lua é baseada na personalidade de uma cachorra bem travessa, além de vários outros traços dela!
 
 ## 🤔 Como adiciono ela ao meu servidor?
