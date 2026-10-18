@@ -17,6 +17,7 @@ from shih.shih_manager import DiscordTokenManager, MongoDBTokenManager
 from caramelo.blacklist.blacklist import blacklist_add, save_blacklist, blacklist_data, blacklist_remove
 from dreamconta.conta import registrar_conta
 from caramelo.caramelo import lock, unlock
+from command.lojinha.ver_lojinha import lojinha_command
 
 
 
@@ -81,6 +82,9 @@ async def on_ready():
 
     # Comandos da DreamConta
     bot.tree.add_command(registrar_conta)
+
+    # Comandos da Lojinha
+    bot.tree.add_command(lojinha_command)
 
 
     try:

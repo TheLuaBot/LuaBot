@@ -45,3 +45,16 @@ async def transferir(usuario,quantidade):
     }}
 
     usuarios.update_one(filtro,relacao)
+
+async def comprar_produto(usuario, produto_id, preco):
+    await new_user(usuario)
+
+    resultado = usuarios.update_one(
+        {"discord_id": usuario.id, "moedas": {"$gte": preco}},
+        {
+            "$inc": {"moedas": -preco},
+            "$push": {"inventario": produto_id},
+        },
+    )
+
+    return resultado.modified_count == 1
