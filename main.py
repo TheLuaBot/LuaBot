@@ -159,6 +159,10 @@ async def daily_error(interaction: discord.Interaction, error: app_commands.AppC
     else:
         raise(error)     
 
+@bot.tree.command(name="transferir", description="Transfira algumas mooncoins pra alguém!")
+async def transferir_cmd(interaction: discord.Interaction, user: discord.Member, quantia: int):
+    await alterar_saldo(usuario=user, quantidade=quantia)
+    await interaction.response.send_message(f"{interaction.user.mention} acabou de transferir {quantia} MoonCoins para {user}!")
 
 @bot.tree.command(name="minerar", description="[Minecraft] Minere Minérios no Discord!")
 async def minerar(interaction: discord.Interaction):
